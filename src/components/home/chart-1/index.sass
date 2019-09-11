@@ -1,0 +1,47 @@
+.home-chart-reason
+	.col-12
+		&:nth-child(1)
+			figure
+				background: #e9168c
+		&:nth-child(2)
+			figure
+				background: #ef5a34
+		&:nth-child(3)
+			figure
+				background: #40b34f
+		&:nth-child(4)
+			figure
+				background: #30abdf
+		@media screen and(max-width:767px)
+			margin-bottom: 20px
+	figure
+		padding: 40px 0 
+		height: 100%
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-direction: column
+		width: 100%
+	
+		.wrapper
+			margin-bottom: 16px
+			height: 100px
+			width: auto
+			img
+				width: 100%
+				height: 100%
+				object-fit: contain
+		figcaption
+			padding: 0 30px
+			p
+				text-align: center
+				font-size: r(18px)
+				font-weight: 400
+				color: #ffffff
+		@media screen and(max-width:1025px)
+			padding: 20px 0
+			figcaption
+				padding: 0 10px
+		@media screen and(max-width:768px)
+			figcaption
+				padding: 0 15px

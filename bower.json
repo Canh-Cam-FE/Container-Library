@@ -1,0 +1,29 @@
+{
+  "name": "gulp-html",
+  "description": "transpile pug, sass, js(es6) => html, css(w/ added prefix, auto-sorted css, minified), js(babeled, minified)",
+  "main": "gulpfile.babel.js",
+  "authors": [
+    "sonvh2510"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sonvh2510/01.ToolBuildHTML",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "3.4.1",
+    "fancybox": "3.5.7",
+    "plyr": "3.5.4",
+    "swiper": "4.5.0",
+    "mdi": "3.6.95",
+    "font-awesome": "5.9.0",
+    "linearicons": "1.0.1",
+    "lazysizes": "5.1.0",
+    "paginationjs": "^2.1.4",
+    "lightgallery": "^1.6.12"
+  }
+}

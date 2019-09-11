@@ -1,0 +1,60 @@
+.home-chart-number
+	.col-6
+		display: flex
+		justify-content: center
+		align-items: center
+		&:nth-child(1)
+			.home-chart-number-item
+				background: #e9168c
+		&:nth-child(2)
+			.home-chart-number-item
+				background: #12d3dd
+		&:nth-child(3)
+			.home-chart-number-item
+				background: #9fc914
+		&:nth-child(4)
+			.home-chart-number-item
+				background: #4914af
+	.home-chart-number-item
+		width: 200px
+		height: 200px
+		display: flex
+		flex-direction: column
+		border-radius: 50%
+		justify-content: center
+		align-items: center
+		*
+			color: #ffffff
+		h2
+			font-size: r(80px)
+			font-weight: 500
+			line-height: r(88px)
+			span
+				vertical-align: super
+				display: inline-block
+				color: #ffffff
+				font-size: r(18px)
+				margin-left: 10px
+				transform: translateY(5px)
+				font-weight: 700
+				text-transform: uppercase
+		p
+			font-size: r(16px)
+			font-weight: 500
+			text-transform: uppercase
+		@media screen and(max-width:1025px)
+			margin-bottom: 20px
+		@media screen and(max-width:400px)
+			width: 150px
+			height: 150px
+			h2
+				font-size: r(60px)
+			p
+				font-size: r(14px)
+		@media screen and(max-width:350px)
+			width: 140px
+			height: 140px
+			h2
+				font-size: r(60px)
+			p
+				font-size: r(13px)

@@ -1,0 +1,410 @@
+header
+	.header-yba
+		height: 100%
+	@media screen and(max-width:1025px)
+		height: 60px
+		position: fixed
+		top: 0
+		left: 0
+		width: 100vw
+	.container
+		height: 100%
+		padding: 10px 10px 14px 10px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		@media screen and(max-width:1025px)
+			padding: 0 10px
+	.header-wrapper-left
+		@media screen and(max-width:350px)
+			height: 100%
+
+		.navbrand
+			a
+				display: inline-block
+				height: 100%
+				img
+					height: auto
+					width: 80%
+				&:first-child
+					margin-right: 10px
+			@media screen and(max-width:1025px)
+				a
+					img
+						height: auto
+						width: 50%
+			@media screen and(max-width:576px)
+				a
+					img
+						height: auto
+						width: 60%
+			@media screen and(max-width:350px)
+				height: 100%
+				display: inline-flex
+				justify-content: flex-start
+				align-items: center
+				a
+					
+					margin: 5px 0
+					width: 60px
+					height: 60px
+					img
+						display: block
+						margin: auto 0
+						height: auto
+						width: 90%
+						margin-top: 5px
+	.header-wrapper-right
+	.header-wrapper-top
+		display: flex
+		justify-content: flex-end
+		align-items: center
+	.header-wrapper-bottom
+		ul
+			list-style-type: none
+			padding: 0
+			margin: 0
+			> li
+				display: inline-block
+				em
+					display: none
+				> a
+					text-decoration: none
+		.sub-menu
+			display: none
+	.language-wrapper
+		position: relative
+		margin: 0 0
+		padding: 0 10px
+	
+		&:before,&:after
+			content: ''
+			display: block
+			position: absolute
+			bottom: 4px
+			width: 1px
+			height: 20px
+			background: #999999
+		&:before
+			left: 0
+		&:after
+			right: 0
+		
+	
+		@media screen and(max-width:1025px)
+			margin-right: 20px
+		.language-list
+			list-style-type: none
+			padding: 0
+			margin: 0
+			li
+				text-transform: uppercase
+				display: inline-block
+				transition: .3s all ease-in-out
+				&.active
+					span,a
+						color: #ff0000
+				&:hover
+					a
+						color: #ffffff
+				a
+					transition: .3s all ease-in-out
+					text-decoration: none
+					color: #999999
+					font-weight: 400
+					font-size: r(14px)
+				span
+					position: relative
+					z-index: 10
+					padding: 0 
+					line-height: 22px
+					font-weight: 400
+					color: #999999
+					font-size: r(14px)
+				em
+					color: #999999
+					font-size: 18px
+					padding-left: 5px
+			.has-dropdown
+				white-space: nowrap
+				position: relative
+				padding-left: 10px
+				&:hover
+					span,a
+						color: #ffffff
+						z-index: 119
+					em
+						position: relative
+						color: #ffffff
+						z-index: 120
+					.nav-sub
+						left: -5px
+						top: -10px
+						padding: 40px 30px 0 41px 
+						opacity: 1
+						filter: none
+						transition: opacity .3s ease, z-index .3s ease .1s
+						li
+							margin-left: -5px
+							display: flex
+							justify-content: center
+							align-items: center
+							line-height: 40px
+							height: 40px
+							width: 100%
+							display: block
+							a
+								line-height: 30px
+								height: 30px
+								width: 100%
+								display: flex
+								justify-content: center
+								align-items: center
+								color: #999999
+							&:hover
+								a
+									color: #ffffff
+				span,a
+					position: relative
+				span
+					&:after
+						bottom: 0
+				ul
+					max-height: 500px
+					position: absolute
+					left: 0
+					top: 0
+					width: 120%
+					margin-left: -10%
+					z-index: 118
+					overflow: hidden
+					background: rgba(#000000,.9)
+					opacity: 0
+					transition: opacity .3s ease,max-height .3s ease .3s
+					li
+						display: none
+						text-align: center
+						padding: 0
+						line-height: 50px
+						margin: 0
+						a
+							color: #ffffff
+							transition: all .3s ease 0s
+
+	.contact-wrapper
+		padding: 0 15px
+		*
+			color: #e30613
+			font-size: r(16px)
+			font-weight: 500
+		@media screen and(max-width:1025px)
+			margin-top: 30px
+	.search-wrapper
+		padding-left: 10px
+		@media screen and(max-width:1025px)
+			margin-top: 15px
+	.header-wrapper-bottom
+		transition:  transform .3s ease-in-out
+		&.active
+			display: block
+			overflow: visible
+			z-index: 12
+			pointer-events: auto
+			opacity: 1
+		ul
+			list-style-type: none
+			padding: 0
+			margin: 0
+			li
+				line-height: 30px
+				display: inline-block
+			
+				&:last-child
+					a
+						padding: 0 0 0 30px
+						@media screen and(max-width:1025px)
+							padding: 0 
+				a
+					padding: 0 30px
+					transition: .3s all ease-in-out
+					text-decoration: none
+					color: #333333
+					font-weight: 400
+					text-transform: uppercase
+					font-weight: 500
+					font-size: r(16px)
+					display: block
+			
+				span
+					position: relative
+					z-index: 10
+					padding: 0 
+					line-height: 22px
+					font-weight: 400
+					color: #333333
+			.has-sub
+				position: relative
+				display: inline-block
+				&.active
+					a
+						color: #e30613
+				&:hover
+					span,a
+						z-index: 14
+						&:after
+							z-index: 11
+							transform: rotate(-180deg)
+					.nav-sub
+						background: #ffffff
+						box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3)
+						opacity: 1
+						filter: none
+						transition: opacity .3s ease,z-index .3s ease .1s
+						li
+							display: block
+							a
+								font-weight: 400
+								padding-left: 15px
+						
+				.nav-sub
+					z-index: 10
+					padding: 0 
+					min-width: 160px
+					li
+						line-height: 35px
+						&.active
+							a
+								color: $blue !important
+								font-weight: 700px
+						&:first-child
+							padding-top: 20px
+							border-top: 3px solid #e30613
+						&:last-child
+							padding-bottom: 20px
+						a
+							padding-left: 16px
+							display: block
+							padding: 0 
+							width: 100%
+							font-size: 14px
+							text-transform: none
+							color: #333333
+							&:hover
+								color: $blue !important
+				span,a
+					position: relative
+					@media screen and(min-width:1025px)
+						&:after
+							display: none
+					&:after
+						position: absolute
+						content: '\f140'
+						font-family: 'Material Design Icons'
+						font-size: r(20px)
+						right: -10px
+						top: 2px
+						color: #333333
+						transition: transform .3s ease
+				span
+					&:after
+						bottom: 0
+				ul
+					max-height: 500px
+					position: absolute
+					left: 40px
+					top: 30px
+					width: 100%
+					margin-left: -10%
+					z-index: 9
+					overflow: hidden
+					opacity: 0
+					transition: opacity .3s ease,max-height .3s ease .3s
+					li
+						display: none
+						text-align: center
+						padding: 0
+						line-height: 50px
+						margin: 0
+						a
+							text-align: left
+							color: #333333
+							transition: all .3s ease 0s
+		@media screen and(max-width: 1025px)
+			pointer-events: none
+			position: static
+			opacity: 1
+			padding-top: 0
+			width: 100vw
+			padding-top: 20px
+			z-index: -1
+			transition: opacity .5s ease !important
+			left: 0
+			ul
+				display: flex !important
+				justify-content: center
+				align-items: center
+				flex-direction: column
+				li
+					display: block
+					text-align: center
+					line-height: 40px
+				.has-sub
+					text-align: center
+					padding: 0 0
+					display: block !important
+					line-height: 40px
+					span,a
+						&:after
+							right: -20px
+					.nav-sub
+						position: static
+						padding: 0 !important
+						transition: .3s all ease-in-out !important
+						li
+							line-height: 40px !important
+					ul
+						padding: 0
+						li
+							line-height: 40px
+						a
+							text-align: center
+						span
+							text-align: center
+	.mobile-toggle
+		em
+			font-size: 35px
+			margin-left: 15px
+			color: #333333
+		@media screen and(min-width:1025px)
+			display: none
+			pointer-events: none
+	.mobile-wrapper
+		z-index: 200
+		opacity: 1
+		display: none
+		height: 100%
+		overflow: scroll
+		pointer-events: none
+		background: #ffffff
+		top: 64px
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-flow: column
+		height: 100vh
+		z-index: 116
+		pointer-events: none
+		position: fixed
+		right: 0
+		opacity: 0
+		width: 0
+		transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+		&.active
+			pointer-events: auto
+			opacity: 1
+			width: 100%
+				
+		@media screen and(min-width:1025px)
+			display: none
+		
+		

@@ -1,0 +1,108 @@
+.shine
+	overflow: hidden
+	position: relative
+	&:before
+		position: absolute
+		top: 0
+		pointer-events: none
+		left: -75%
+		z-index: 2
+		display: block
+		content: ''
+		width: 50%
+		height: 100%
+		background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%)
+		background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%)
+		-webkit-transform: skewX(-25deg)
+		transform: skewX(-25deg)
+	&:hover
+		&:before
+			-webkit-animation: shine .75s
+			animation: shine .75s
+			@-webkit-keyframes shine 
+				100% 
+					left: 125%
+			@keyframes shine
+				100% 
+					left: 125%
+.circle
+	overflow: hidden
+	position: relative
+	&:before
+		position: absolute
+		top: 50%
+		left: 50%
+		z-index: 2
+		display: block
+		content: ''
+		width: 0
+		height: 0
+		background: rgba(255,255,255,.2)
+		border-radius: 100%
+		-webkit-transform: translate(-50%, -50%)
+		transform: translate(-50%, -50%)
+		opacity: 0
+	&:hover
+		&:before
+			animation: circle .75s
+			@-webkit-keyframes circle
+				0%
+					opacity: 1
+
+				40%
+					opacity: 1
+
+				100%
+					width: 200%
+					height: 200%
+					opacity: 0
+
+
+			@keyframes circle
+				0%
+					opacity: 1
+
+				40%
+					opacity: 1
+
+				100%
+					width: 200%
+					height: 200%
+					opacity: 0
+.zoom-in
+	overflow: hidden
+	transition: .3s all ease-in-out
+	&:hover
+		img
+			transform: scale(1.13)
+	img
+		transform: scale(1)
+		transition: .3s all ease-in-out
+.opacity
+	transition: .3s all ease-in-out
+	&:hover
+		opacity: .7
+	img
+		opacity: 1
+		transition: .3s all ease-in-out
+.flash
+	transition: .3s all ease-in-out
+	&:hover
+		img
+			opacity: 1
+			animation: flash 1.5s
+
+@-webkit-keyframes flash
+	0%
+		opacity: .4
+
+	100%
+		opacity: 1
+
+
+@keyframes flash
+	0%
+		opacity: .4
+
+	100%
+		opacity: 1
