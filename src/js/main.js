@@ -273,6 +273,20 @@ $(document).on('scroll', function() {
         GalleryNavScroll.checkMenuScroll()
     }
 })
+function ShareNewsDetail(){
+	$("#sharenews").jsSocials({
+		showLabel: false,
+		showCount: false,
+		shares: [{
+			share: "facebook",
+			logo: "fab fa-facebook-f"
+		}, {
+			share: "twitter",
+			logo: "fab fa-twitter"
+		}
+	]
+	});
+}
 $(document).ready(function() {
 	//Declare normal variable javascript
 	//Hide element when smaller than 1025
@@ -300,6 +314,7 @@ $(document).ready(function() {
 	mappingContact();
 	AboutNav.init();
 	GalleryNav()
+	ShareNewsDetail()
 	height('.tvc-news .news-small .figure-news')
 	if ($(window).width() > 1024) {
 		const $menu = $(".searchbox");

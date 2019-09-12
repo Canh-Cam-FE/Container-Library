@@ -24,6 +24,7 @@
     "linearicons": "1.0.1",
     "lazysizes": "5.1.0",
     "paginationjs": "^2.1.4",
-    "lightgallery": "^1.6.12"
+    "lightgallery": "^1.6.12",
+    "jssocials": "^1.5.0"
   }
 }
