@@ -1,39 +1,4 @@
-$(document).ready(function() {
-	//Declare normal variable javascript
-	//Hide element when smaller than 1025
-	if ($(window).width() < 1025) {
-		$(".bottom-header").fadeIn(function() {
-			$(".bottom-header").css({
-				display: "flex"
-			});
-		});
-	}
-	//Toggle Search
-	$(".search-toggle").on("click", function() {
-		$(".searchbox").toggleClass("active");
-	});
-	//Library init
-	$(".lightgallery").lightGallery();
-	//Declare function Javascript
-	mobileToggle();
-	swiperInit();
-	tabActive();
-	mappingMenu();
-	mappingSearch();
-	mappingContact();
-	if ($(window).width() > 1024) {
-		const $menu = $(".searchbox");
-		$(document).mouseup(e => {
-			if (
-				!$menu.is(e.target) && // if the target of the click isn't the container...
-				$menu.has(e.target).length === 0
-			) {
-				// ... nor a descendant of the container
-				$menu.removeClass("active");
-			}
-		});
-	}
-});
+
 //Check if windows size large then 1024 then these function will be execute
 if ($(window).width() > 1024) {
 	const $menu = $(".searchbox");
@@ -217,3 +182,94 @@ function mappingContact() {
 		breakpoint: 1025
 	}).watch();
 }
+let AboutNav = {
+    clickToScroll: () => {
+        $('.tvc-nav.about ul li').on('click', function() {
+            $('.tvc-nav.about ul li').removeClass('active')
+            $(this).addClass('active')
+            let active = $(this).attr('data-nav')
+            let offset = $('section[data-scroll=' + active + ']').offset().top - $('header').height() - $('.tvc-nav.about').height()
+            $("html, body").animate({
+                scrollTop: offset
+            }, 1000);
+        })
+    },
+    checkMenuScroll: () => {
+        var scrollTop = $(window).scrollTop(),
+            header = $('header').outerHeight(),
+            offset = $('.tvc-nav.about').offset().top
+        if (((offset - header) - scrollTop) <= 0) {
+            $('.tvc-nav.about').addClass('active').css({
+                "top": (header - 0) + "px"
+            })
+        } else {
+            $('.tvc-nav.about').removeClass('active').removeAttr('style')
+        }
+    },
+    scrollActive: () => {
+        $('.tvc-nav.about ul li').each(function() {
+            let active = $(this).attr('data-nav')
+            let offset = $('section[data-scroll=' + active + ']').offset().top - $('header').height() - $('.tvc-nav.about').height() - 100
+            if ($(window).scrollTop() >= offset) {
+                $('.tvc-nav.about ul li').removeClass('active')
+                $(this).addClass('active');
+            }
+        });
+    },
+    showNav: () => {
+        $('.tvc-nav.about .nav-mobile').on('click', function() {
+            $('.tvc-nav.about .nav-mobile').toggleClass('active')
+            $('.tvc-nav.about .main-wrap').slideToggle()
+        })
+    },
+    init: () => {
+        if ($('.tvc-nav.about').length > 0) {
+            AboutNav.scrollActive()
+            AboutNav.clickToScroll()
+        }
+        AboutNav.showNav()
+    }
+}
+$(document).on('scroll', function() {
+    if ($('.tvc-nav.about').length > 0) {
+        AboutNav.scrollActive()
+        AboutNav.checkMenuScroll()
+    }
+})
+$(document).ready(function() {
+	//Declare normal variable javascript
+	//Hide element when smaller than 1025
+	if ($(window).width() < 1025) {
+		$(".bottom-header").fadeIn(function() {
+			$(".bottom-header").css({
+				display: "flex"
+			});
+		});
+	}
+	//Toggle Search
+	$(".search-toggle").on("click", function() {
+		$(".searchbox").toggleClass("active");
+	});
+	//Library init
+	$(".lightgallery").lightGallery();
+	//Declare function Javascript
+	mobileToggle();
+	swiperInit();
+	tabActive();
+	mappingMenu();
+	mappingSearch();
+	mappingContact();
+	AboutNav.init();
+	if ($(window).width() > 1024) {
+		const $menu = $(".searchbox");
+		$(document).mouseup(e => {
+			if (
+				!$menu.is(e.target) && // if the target of the click isn't the container...
+				$menu.has(e.target).length === 0
+			) {
+				// ... nor a descendant of the container
+				$menu.removeClass("active");
+			}
+		});
+	}
+});
