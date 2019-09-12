@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'News'
+	- var bodyClass = 'news-page'
+
+block main
+	include ../components/home/banner/index
+	include ../components/news/index
+	include ../components/pagination/index

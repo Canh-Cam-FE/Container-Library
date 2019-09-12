@@ -12,7 +12,18 @@ if ($(window).width() > 1024) {
 		}
 	});
 }
-
+function height(el) {
+    var height = 0;
+    $(el).each(function() {
+        var thisHeight = $(this).height();
+        if (thisHeight > height) {
+            height = thisHeight;
+        }
+        setTimeout(() => {
+            $(el).height(height)
+        }, 100)
+    })
+}
 function swiperInit() {
 	var homeTopSwiper = new Swiper(
 		".home-swiper-banner-top-wrapper .swiper-container",
@@ -230,10 +241,36 @@ let AboutNav = {
         AboutNav.showNav()
     }
 }
+let GalleryNavScroll = {
+    checkMenuScroll: () => {
+        var scrollTop = $(window).scrollTop(),
+            header = $('header').outerHeight(),
+            offset = $('.tvc-nav.gallery-tab .main-nav').offset().top
+        if (((offset - header) - scrollTop) <= 0) {
+            $('.tvc-nav.gallery-tab .main-nav').addClass('active').css({
+                "top": (header - 0) + "px"
+            })
+        } else {
+            $('.tvc-nav.gallery-tab .main-nav').removeClass('active').removeAttr('style')
+        }
+    }
+}
+function GalleryNav() {
+    $('.gallery-tab .main-nav .item').on('click', function() {
+        $('.gallery-tab .main-nav .item').removeClass('active')
+        $(this).addClass('active')
+        let indexTab = $(this).attr('data-tab')
+        $('.gallery-tab .main-content .content-item').removeClass('active')
+        $('.gallery-tab .main-content .content-item[data-content=' + indexTab + ']').addClass('active')
+    })
+}
 $(document).on('scroll', function() {
     if ($('.tvc-nav.about').length > 0) {
         AboutNav.scrollActive()
         AboutNav.checkMenuScroll()
+    }
+    if ($('.tvc-nav.gallery-tab .main-nav').length > 0) {
+        GalleryNavScroll.checkMenuScroll()
     }
 })
 $(document).ready(function() {
@@ -251,7 +288,9 @@ $(document).ready(function() {
 		$(".searchbox").toggleClass("active");
 	});
 	//Library init
-	$(".lightgallery").lightGallery();
+	$(".lightgallery").lightGallery({
+		thumbnail:true,
+	});
 	//Declare function Javascript
 	mobileToggle();
 	swiperInit();
@@ -260,6 +299,8 @@ $(document).ready(function() {
 	mappingSearch();
 	mappingContact();
 	AboutNav.init();
+	GalleryNav()
+	height('.tvc-news .news-small .figure-news')
 	if ($(window).width() > 1024) {
 		const $menu = $(".searchbox");
 		$(document).mouseup(e => {
