@@ -1,0 +1,369 @@
+.tvc-project-detail
+	padding-bottom: 25px
+	.main-title
+		margin-bottom: 15px
+		h1 
+			font-size: 22px
+			font-weight: 700
+			color: #333333
+			line-height: 1.2
+	.main-slide
+		padding-bottom: 10px
+		.gallery-top
+			margin-bottom: 15px
+			.image
+				width: 100%
+				height: 250px
+				position: relative
+				overflow: hidden
+				img 
+					height: 250px
+					width: 100%
+					position: absolute
+					object-fit: cover
+		.gallery-thumbs
+			.image
+				width: 100%
+				height: 60px
+				position: relative
+				overflow: hidden
+				background: #000000
+				border: 2px solid #ffffff
+				// transition: .4s ease-in-out all
+				img 
+					height: 60px
+					width: 100%
+					position: absolute
+					object-fit: cover
+					opacity: 0.4
+			.swiper-wrapper
+				display: flex
+				justify-content: center
+				align-items: center
+			.swiper-slide-thumb-active
+				.image 
+					border: 2px solid #153d8a
+					img 
+						opacity: 1
+	.main-content
+		margin-top: 10px
+		padding: 15px 0
+		border-top: 2px solid #cccccc
+		.item
+			display: flex
+			align-items: flex-start
+			flex-wrap: wrap
+			margin-left: -10px
+			margin-right: -10px
+			padding: 10px 0
+			border-bottom: 1px solid #f4f4f4
+			.title
+				flex: 0 0 25%
+				width: 25%
+				padding-left: 10px
+				padding-right: 10px
+				h3 
+					font-size: 16px
+					font-weight: 700
+					color: #333333
+			.content
+				flex: 0 0 75%
+				width: 75%
+				padding-left: 10px
+				padding-right: 10px
+				line-height: 1.3
+				font-size: 16px
+				color: #333333
+	.full-content
+		padding-bottom: 15px
+		margin-bottom: 15px
+		font-size: 16px
+		font-weight: 400
+		color: #333333
+		line-height: 1.4
+		border-bottom: 2px solid #cccccc
+		text-align: justify
+	.main-project-other
+		.title-other
+			margin-bottom: 10px
+			h2 
+				font-size: 20px
+				font-weight: 700
+				color: #333333
+		.main-item
+			display: flex
+			flex-wrap: wrap
+			.item
+				flex: 0 0 100%
+				width: 100%
+				margin-bottom: 15px
+			.image
+				height: 200px
+				width: 100%
+				position: relative
+				overflow: hidden
+				margin-bottom: 8px
+				img 
+					width: 100%
+					height: 200px
+					position: absolute
+					object-fit: cover
+			.title
+				h3 
+					font-size: 16px
+					font-weight: 700
+					color: #333333
+					line-height: 1.4
+	@media(min-width: 768px)
+		.main-title
+			margin-bottom: 10px
+			h1 
+				font-size: 24px
+				font-weight: 700
+				color: #333333
+				line-height: 1.2
+		.main-slide
+			padding-bottom: 10px
+			.gallery-top
+				margin-bottom: 15px
+				.image
+					width: 100%
+					height: 400px
+					position: relative
+					overflow: hidden
+					img 
+						height: 400px
+						width: 100%
+						position: absolute
+						object-fit: cover
+			.gallery-thumbs
+				.swiper-slide
+					width: 150px !important
+				.image
+					width: 100%
+					height: 100px
+					position: relative
+					overflow: hidden
+					background: #000000
+					border: 2px solid #ffffff
+					// transition: .4s ease-in-out all
+					img 
+						height: 100px
+						width: 100%
+						position: absolute
+						object-fit: cover
+						opacity: 0.4
+				.swiper-wrapper
+					display: flex
+					justify-content: center
+					align-items: center
+				.swiper-slide-thumb-active
+					.image 
+						border: 2px solid #153d8a
+						img 
+							opacity: 1
+		.main-content
+			margin-top: 10px
+			padding: 15px 0
+			border-top: 2px solid #cccccc
+			.item
+				display: flex
+				align-items: flex-start
+				flex-wrap: wrap
+				margin-left: -10px
+				margin-right: -10px
+				padding: 10px 0
+				border-bottom: 1px solid #f4f4f4
+				.title
+					flex: 0 0 25%
+					width: 25%
+					padding-left: 10px
+					padding-right: 10px
+					h3 
+						font-size: 16px
+						font-weight: 700
+						color: #333333
+				.content
+					flex: 0 0 75%
+					width: 75%
+					padding-left: 10px
+					padding-right: 10px
+					line-height: 1.3
+					font-size: 16px
+					color: #333333
+		.full-content
+			padding-bottom: 15px
+			margin-bottom: 15px
+			font-size: 16px
+			font-weight: 400
+			color: #333333
+			line-height: 1.4
+			border-bottom: 2px solid #cccccc
+			text-align: justify
+		.main-project-other
+			.title-other
+				margin-bottom: 10px
+				h2 
+					font-size: 20px
+					font-weight: 700
+					color: #333333
+			.main-item
+				display: flex
+				flex-wrap: wrap
+				margin-left: -5px
+				margin-right: -5px
+				.item
+					flex: 0 0 33.3333%
+					width: 33.3333%
+					padding-left: 5px
+					padding-right: 5px
+					margin-bottom: 15px
+				.image
+					height: 200px
+					width: 100%
+					position: relative
+					overflow: hidden
+					margin-bottom: 8px
+					img 
+						width: 100%
+						height: 200px
+						position: absolute
+						object-fit: cover
+				.title
+					h3 
+						font-size: 16px
+						font-weight: 700
+						color: #333333
+	@media(min-width: 1025px)
+		.main-title
+			margin-bottom: 25px
+			h1 
+				font-size: 28px
+				font-weight: 700
+				color: #333333
+				line-height: 1.2
+		.main-slide
+			padding-bottom: 10px
+			margin-bottom: 35px
+			.gallery-top
+				margin-bottom: 15px
+				.image
+					width: 100%
+					height: 650px
+					position: relative
+					overflow: hidden
+					img 
+						height: 650px
+						width: 100%
+						position: absolute
+						object-fit: cover
+			.gallery-thumbs
+				.swiper-slide
+					width: 150px !important
+				.image
+					width: 100%
+					height: 80px
+					position: relative
+					overflow: hidden
+					background: #000000
+					border: 2px solid #ffffff
+					// transition: .4s ease-in-out all
+					img 
+						height: 80px
+						width: 100%
+						position: absolute
+						object-fit: cover
+						opacity: 0.4
+				.swiper-wrapper
+					display: flex
+					justify-content: center
+					align-items: center
+				.swiper-slide-thumb-active
+					.image 
+						border: 2px solid #153d8a
+						img 
+							opacity: 1
+		.main-content
+			margin-top: 10px
+			padding: 15px 0
+			border-top: 2px solid #cccccc
+			padding-bottom: 25px
+			.item
+				display: flex
+				align-items: flex-start
+				flex-wrap: wrap
+				margin-left: -10px
+				margin-right: -10px
+				padding: 15px 0
+				border-bottom: 1px solid #f4f4f4
+				.title
+					flex: 0 0 25%
+					width: 25%
+					padding-left: 10px
+					padding-right: 10px
+					margin-bottom: 0
+					h3 
+						font-size: 16px
+						font-weight: 700
+						color: #333333
+				.content
+					flex: 0 0 75%
+					width: 75%
+					padding-left: 10px
+					padding-right: 10px
+					line-height: 1.3
+					font-size: 16px
+					color: #333333
+		.full-content
+			padding-bottom: 20px
+			margin-bottom: 15px
+			font-size: 16px
+			font-weight: 400
+			color: #333333
+			line-height: 1.4
+			border-bottom: 2px solid #cccccc
+			text-align: justify
+		.main-project-other
+			.title-other
+				margin-bottom: 15px
+				h2 
+					font-size: 26px
+					font-weight: 700
+					color: #333333
+			.main-item
+				display: flex
+				flex-wrap: wrap
+				margin-left: -5px
+				margin-right: -5px
+				.item
+					flex: 0 0 33.3333%
+					width: 33.3333%
+					padding-left: 5px
+					padding-right: 5px
+					margin-bottom: 15px
+				.image
+					height: 250px
+					width: 100%
+					position: relative
+					overflow: hidden
+					margin-bottom: 8px
+					img 
+						width: 100%
+						height: 250px
+						position: absolute
+						object-fit: cover
+						transition: .4s ease-in-out all
+				.title
+					h3 
+						font-size: 20px
+						font-weight: 700
+						color: #333333
+						transition: .4s ease-in-out all
+				figure
+					&:hover
+						.image
+							img 
+								transform: scale(1.1)
+						.title
+							h3 
+								color: #153d8a
