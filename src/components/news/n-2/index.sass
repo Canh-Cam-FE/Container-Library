@@ -1,0 +1,44 @@
+.tvc-news-2
+	.brief-content
+		padding-bottom: 15px
+	.main-nav
+		display: flex
+		align-items: center
+		margin-bottom: 15px
+		.item
+			padding: 10px 20px
+			text-align: center
+			background: rgba(0,0,0,.2)
+			color: #ffffff
+			user-select: none
+			cursor: pointer
+			font-weight: 500
+			display: flex
+			align-items: center
+			transition: .4s all ease-in-out
+			justify-content: center
+			min-width: 100px
+			border-right: 2px solid #ffffff
+			&:hover, &.active
+				background: #153d8a
+				border-color: #fff
+	.main-content
+		position: relative
+		height: 365px
+		.content-item
+			width: 100%
+			position: absolute
+			pointer-events: none
+			opacity: 0
+			// transform: translateY(100px)
+			top: 0
+			z-index: -1
+			transition: all 0.5s
+			&.active
+				pointer-events: auto
+				transition: .5s ease-in-out all
+				opacity: 1
+				position: relative
+				// transform: translateY(0)
+				top: 0
+				z-index: 11

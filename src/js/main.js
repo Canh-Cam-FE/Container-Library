@@ -295,14 +295,13 @@ function ProjectDetailSlide() {
 		spaceBetween: 10,
 		slidesPerView: 4,
 		freeMode: true,
-		loopedSlides: 5,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 	});
 	var galleryTop = new Swiper('.tvc-project-detail .gallery-top', {
-		spaceBetween: 10,
-		loopedSlides: 5,
-		loop: true,
+		autoplay: {
+			delay: 5000,
+		},
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
@@ -310,6 +309,40 @@ function ProjectDetailSlide() {
 		thumbs: {
 			swiper: galleryThumbs,
 		},
+	});
+}
+function TabNews() {
+    $('.tvc-news-2 .main-nav .item').on('click', function() {
+        $('.tvc-news-2 .main-nav .item').removeClass('active')
+        $(this).addClass('active')
+        let indexTab = $(this).attr('data-tab')
+        $('.tvc-news-2 .main-content .content-item').removeClass('active')
+        $('.tvc-news-2 .main-content .content-item[data-content=' + indexTab + ']').addClass('active')
+    })
+}
+function onScrollNewsDetailDeskTop() {
+	var header = $('.news-page header').height();
+	var footer = $('footer').height();
+	var windowSize = $(window).height();
+	$(window).scroll(function() {
+		var windowFull = $('body').height();
+		var heightNewsDetail = $(window).scrollTop();
+		var checkScrollBig = windowFull - heightNewsDetail;
+		var checkFooter = footer + windowSize;
+		if( heightNewsDetail  > header) {
+			$('.tvc-news-detail-1').addClass('active')
+			$('.tvc-news-detail-1 .scroll-on-desktop').addClass('active')
+		}
+		else{
+			$('.tvc-news-detail-1').removeClass('active')
+			$('.tvc-news-detail-1 .scroll-on-desktop').removeClass('active')
+		}
+		if(checkScrollBig <= checkFooter ){
+			$('.tvc-news-detail-1').addClass('no-scroll')
+		}
+		else{
+			$('.tvc-news-detail-1').removeClass('no-scroll')
+		}
 	});
 }
 $(document).ready(function () {
@@ -342,6 +375,8 @@ $(document).ready(function () {
 	ShareNewsDetail();
 	height('.tvc-news .news-small .figure-news');
 	ProjectDetailSlide();
+	TabNews();
+	onScrollNewsDetailDeskTop()
 	if ($(window).width() > 1024) {
 		const $menu = $(".searchbox");
 		$(document).mouseup(e => {

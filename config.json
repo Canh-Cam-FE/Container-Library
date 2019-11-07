@@ -15,13 +15,15 @@
 		"src/_plugins/medium-zoom.js",
 		"bower_components/lightgallery/dist/js/lightgallery-all.js",
 		"bower_components/lightgallery/modules/*",
-		"bower_components/jssocials/dist/jssocials.min.js"
+		"bower_components/jssocials/dist/jssocials.min.js",
+		"bower_components/fancybox/dist/jquery.fancybox.min.js"
 	],
 	"css": [
 		"src/_plugins/font.css",
 		"src/_plugins/grid.css",
 		"bower_components/swiper/dist/css/swiper.css",
 		"bower_components/lightgallery/dist/css/lightgallery.css",
-		"bower_components/jssocials/dist/jssocials-theme-flat.css"
+		"bower_components/jssocials/dist/jssocials-theme-flat.css",
+		"bower_components/fancybox/dist/jquery.fancybox.min.css"
 	]
 }

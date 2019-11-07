@@ -1,4 +1,37 @@
 .tvc-contact
+	.box-customer
+		.image
+			height: 200px
+			width: 100%
+			overflow: hidden
+			position: relative
+			margin-bottom: 10px
+			img 
+				height: 200px
+				width: 100%
+				position: absolute
+				object-fit: cover
+			@media(min-width: 1025px)
+				height: 370px
+				img 
+					height: 370px
+		figcaption 
+			text-align: center
+			.title
+				margin-bottom: 5	px
+				h4 
+					font-size: 16px
+					font-weight: 600
+					color: #153d8a
+			.chuc-danh 
+				font-size: 15px 
+				font-weight: 400
+				color: #333333
+			.number-phone
+				a 
+					font-size: 15px 
+					font-weight: 400
+					color: #333333
 	.main-contact
 		.box-info
 			padding: 10px
@@ -202,6 +235,7 @@
 					textarea
 						height: 135px
 	.main-maps
+		margin-top: 25px
 		iframe
 			width: 100%
 			height: 250px

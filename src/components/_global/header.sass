@@ -1,23 +1,36 @@
 header
 	position: fixed
 	top: 0
-	left: 0
+	left: 50%
+	transform: translate(-50%)
 	width: 100vw
 	background: #ffffff
-	z-index: 150
+	z-index: 999
 	.header-yba
 		height: 100%
 	@media screen and(max-width:1025px)
 		height: 60px
 		
 	.container
-		height: 100%
 		padding: 10px 10px 14px 10px
 		display: flex
 		justify-content: space-between
 		align-items: center
+		position: relative
+		margin: 0 auto
+		&:before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translate(-50%)
+			background: #153d8a
+			width: calc( 100% - 20px )
+			height: 4px
 		@media screen and(max-width:1025px)
 			padding: 0 10px
+			&:before
+				display: none
 	.header-wrapper-left
 		@media screen and(max-width:350px)
 			height: 100%

@@ -41,29 +41,45 @@ section.tvc-contact.pt
 									| Email: 
 									a(href="mailto: trangntn@ybahcm.com.vn") trangntn@ybahcm.com.vn
 				.col-md-8 
-					.box-contact
-						.title
-							h3 GỬI TIN NHẮN ĐẾN CHÚNG TÔI
-						.sub-title 
-							p Quý khách có thể liên hệ trực tiếp với chúng tôi để được tư vấn hoặc vui lòng điền thông tin vào mẫu bên dưới. Chúng tôi sẽ phản hồi trong thời gian sớm nhất.
-						.main-form
-							.form-group
-								label(for="") Họ và Tên*
-								input(type="text")
-							.form-group
-								label(for="") Điện thoại
-								input(type="text")
-							.form-group
-								label(for="") Địa chỉ
-								input(type="text")
-							.form-group
-								label(for="") Email*
-								input(type="text")
-							.form-group
-								label(for="") Nội dung
-								textarea()
-							.form-group.frm-btnwrap
-								.frm-btn
-									input(type="submit" value="Gửi")
+					.box-customer
+						.row
+							-for(x=0; x<3; x++)
+								.col-md-4
+									figure
+										.image
+											img(src="./img/news/9.jpg", alt="")
+										figcaption
+											.title
+												h4 Nguyễn Văn A 
+											.chuc-danh
+												p Chức danh dự án
+											.chuc-danh
+												p Chức danh công ty
+											.number-phone
+												a(href="tel: 123456789") 0 123 45 67 89
+					//- .box-contact
+					//- 	.title
+					//- 		h3 GỬI TIN NHẮN ĐẾN CHÚNG TÔI
+					//- 	.sub-title 
+					//- 		p Quý khách có thể liên hệ trực tiếp với chúng tôi để được tư vấn hoặc vui lòng điền thông tin vào mẫu bên dưới. Chúng tôi sẽ phản hồi trong thời gian sớm nhất.
+					//- 	.main-form
+					//- 		.form-group
+					//- 			label(for="") Họ và Tên*
+					//- 			input(type="text")
+					//- 		.form-group
+					//- 			label(for="") Điện thoại
+					//- 			input(type="text")
+					//- 		.form-group
+					//- 			label(for="") Địa chỉ
+					//- 			input(type="text")
+					//- 		.form-group
+					//- 			label(for="") Email*
+					//- 			input(type="text")
+					//- 		.form-group
+					//- 			label(for="") Nội dung
+					//- 			textarea()
+					//- 		.form-group.frm-btnwrap
+					//- 			.frm-btn
+					//- 				input(type="submit" value="Gửi")
 		.main-maps
 			iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.398363786759!2d106.6953156152604!3d10.780770362060409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f37ae8e51ad%3A0x1def113bd2d9664!2zMSBQaOG6oW0gTmfhu41jIFRo4bqhY2gsIELhur9uIE5naMOpLCBRdeG6rW4gMSwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1568282631610!5m2!1svi!2s" frameborder="0" style="border:0;" allowfullscreen="")
