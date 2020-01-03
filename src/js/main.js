@@ -196,8 +196,8 @@ function mappingContact() {
 }
 let AboutNav = {
 	clickToScroll: () => {
-		$('.tvc-nav.about ul li').on('click', function () {
-			$('.tvc-nav.about ul li').removeClass('active')
+		$('.tvc-nav.about ul li, header .header-wrapper-bottom .about-on-scroll li').on('click', function () {
+			$('.tvc-nav.about ul li, header .header-wrapper-bottom .about-on-scroll li').removeClass('active')
 			$(this).addClass('active')
 			let active = $(this).attr('data-nav')
 			let offset = $('section[data-scroll=' + active + ']').offset().top - $('header').height() - $('.tvc-nav.about').height()
