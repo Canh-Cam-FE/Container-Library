@@ -321,7 +321,7 @@ function TabNews() {
     })
 }
 function onScrollNewsDetailDeskTop() {
-	var header = $('.news-page header').height();
+	var header = $('.news-detail-page header').height();
 	var footer = $('footer').height();
 	var windowSize = $(window).height();
 	$(window).scroll(function() {

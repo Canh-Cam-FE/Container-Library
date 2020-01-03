@@ -231,6 +231,7 @@
         <!-- ////////////// Javascript Include ////////////// -->
         <script src="/Data/Sites/1/skins/default/js/core.min.js"></script>
 		<script src="/Data/Sites/1/skins/default/js/main.min.js"></script>
+		<script src="https://pagination.js.org/dist/2.1.5/pagination.min.js"></script>
     </form>
     <script type="text/javascript">
         function HideToolbar() {
