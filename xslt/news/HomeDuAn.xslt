@@ -11,7 +11,9 @@
                     <xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
                     
                     <div class="col-lg-3">
-                        <div class="home-project-complete-banner"><a href="http://www.phuongnambook.com.vn/"><img src="/Data/Sites/1/media/banner/b1.png" alt=""></img></a><a href="https://www.fahasa.com/"><img src="/Data/Sites/1/media/banner/b2.png" alt=""></img></a></div>
+						<div class="main-banner-move">
+						</div>
+                        
                     </div>
                 </div>
             </div>

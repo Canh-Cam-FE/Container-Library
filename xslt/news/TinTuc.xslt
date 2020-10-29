@@ -21,6 +21,9 @@
             <div class="main-content">
                 <xsl:apply-templates select="Zone" mode="Zone223"></xsl:apply-templates>
             </div>
+			<div class="test">
+                <xsl:value-of select="vitri" disable-output-escaping="yes"></xsl:value-of>
+            </div>
         </div>
     </xsl:template>
     <xsl:template match="Zone" mode="Zone222">
@@ -37,7 +40,7 @@
         </div>
     </xsl:template>
     <xsl:template match="Zone" mode="Zone223">
-        <div class="content-item">
+        <div class="content-item" id="demo">
             <xsl:attribute name="data-content">
                 <xsl:value-of select="position()" disable-output-escaping="yes"></xsl:value-of>
             </xsl:attribute>

@@ -5,21 +5,21 @@
         <ul class="language-list">
             <li class="has-dropdown">
                 <span><xsl:apply-templates select="/LanguageList/Language" mode="Active"></xsl:apply-templates></span>
-                <em class="mdi mdi-chevron-down"></em>
-                <ul class="nav-sub">
+                <!-- <em class="mdi mdi-chevron-down"></em> -->
+                <!-- <ul class="nav-sub">
                     <xsl:apply-templates select="/LanguageList/Language" ></xsl:apply-templates>
-                </ul>
+                </ul> -->
             </li>
         </ul>
     </xsl:template>
     <xsl:template match="Language" mode="Active">
         <xsl:if test="IsActive='true'">
-            <span>
+            <!-- <span> -->
                 <xsl:value-of select="Title"></xsl:value-of>
-            </span>
+            <!-- </span> -->
         </xsl:if>
     </xsl:template>
-    <xsl:template match="Language">
+    <!-- <xsl:template match="Language">
         <li>
             <a>
                 <xsl:attribute name="href">
@@ -31,5 +31,5 @@
                 <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
             </a>
         </li>
-    </xsl:template>
+    </xsl:template> -->
 </xsl:stylesheet>

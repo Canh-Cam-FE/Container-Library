@@ -26,6 +26,7 @@
     <xsl:template match="News">
         <div class="swiper-slide">
             <div class="wrapper">
+				
                 <img>
                     <xsl:attribute name="src">
                         <xsl:value-of select="ImageUrl"></xsl:value-of>

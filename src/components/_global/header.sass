@@ -70,7 +70,7 @@ header
 						height: auto
 						width: 90%
 						margin-top: 5px
-	.header-wrapper-right
+	// .header-wrapper-right
 	.header-wrapper-top
 		display: flex
 		justify-content: flex-end
@@ -120,9 +120,9 @@ header
 				&.active
 					span,a
 						color: #ff0000
-				&:hover
-					a
-						color: #ffffff
+				// &:hover
+				// 	a
+				// 		color: #ffffff
 				a
 					transition: .3s all ease-in-out
 					text-decoration: none
@@ -147,11 +147,11 @@ header
 				padding-left: 10px
 				&:hover
 					span,a
-						color: #ffffff
+						// color: #ffffff
 						z-index: 119
 					em
 						position: relative
-						color: #ffffff
+						// color: #ffffff
 						z-index: 120
 					.nav-sub
 						left: -5px
@@ -346,7 +346,7 @@ header
 							color: #333333
 							transition: all .3s ease 0s
 		@media screen and(max-width: 1025px)
-			pointer-events: none
+			pointer-events: auto
 			position: static
 			opacity: 1
 			padding-top: 0
@@ -386,6 +386,8 @@ header
 							text-align: center
 						span
 							text-align: center
+			// &.active
+			// 	pointer-events: auto 
 	.mobile-toggle
 		em
 			font-size: 35px

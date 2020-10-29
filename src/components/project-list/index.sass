@@ -37,7 +37,13 @@
 			font-size: 22px
 		@media screen and(max-width:576px)
 			padding-left: 0
-	
+	.bg-grey
+		@media(max-width: 768px)
+			padding: 20px
+			h3 
+				&:before 
+					left: -15px
+					top: 8px
 	p
 		display: inline-block
 		strong
@@ -104,7 +110,8 @@
 		align-items: flex-start
 		flex-wrap: wrap
 		flex:  0 0 100%
-		margin: 20px -10px 0 -10px
+		text-align: center
+		// margin: 20px -10px 0 -10px
 		a
 			flex: 0 0 50%
 			padding: 0 10px

@@ -360,7 +360,7 @@ $(document).ready(function () {
 		$(".searchbox").toggleClass("active");
 	});
 	//Library init
-	$(".lightgallery").lightGallery({
+	$(".main-images").lightGallery({
 		thumbnail: true,
 	});
 	//Declare function Javascript
@@ -389,4 +389,5 @@ $(document).ready(function () {
 			}
 		});
 	}
+	$('.home-project-complete-banner').appendTo('.main-banner-move')
 });

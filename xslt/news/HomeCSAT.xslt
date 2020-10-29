@@ -7,21 +7,14 @@
 		</section>
     </xsl:template>
     <xsl:template match="Zone">
-        <div class="container">
-            <div class="article-title-red-line">
-                <p><xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of></p>
-            </div>
-            <div class="row mainbox">
-                <xsl:apply-templates select="News"></xsl:apply-templates>
-                
-            </div>
-        </div>
+		<div class="container">
+			<div class="article-title-red-line">
+				<p><xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of></p>
+			</div>
+			<xsl:apply-templates select="News"></xsl:apply-templates>
+		</div>
     </xsl:template>
     <xsl:template match="News">
-        <div class="col-12">
-            <div class="home-chart-number-item" style="width: 100%">
-                <xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
-            </div>
-        </div>
+		<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
     </xsl:template>
 </xsl:stylesheet>

@@ -165,7 +165,9 @@
 
                 <asp:Panel ID="divAltContent2" runat="server" CssClass="altcontent2">
                     <asp:ContentPlaceHolder ID="altContent2" runat="server"></asp:ContentPlaceHolder>
-                </asp:Panel>
+				</asp:Panel>
+				<portal:ModuleWrapper ID="mdl1171" runat="server" ConfigureModuleId="1171" />
+				<portal:ModuleWrapper ID="mdl1172" runat="server" ConfigureModuleId="1172" />
             </main>
             <footer>
                 <section class="footer-top">

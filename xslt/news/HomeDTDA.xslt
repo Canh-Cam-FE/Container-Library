@@ -21,13 +21,13 @@
             <div class="figure-project">
                 <div class="figure-image">
                     <div class="wrapper">
-                        <a>
+                        <!-- <a>
                             <xsl:attribute name="href">
                                 <xsl:value-of select="Url"></xsl:value-of>
                             </xsl:attribute>
                             <xsl:attribute name="title">
                                 <xsl:value-of select="Title"></xsl:value-of>
-                            </xsl:attribute>
+                            </xsl:attribute> -->
                             <img>
                                 <xsl:attribute name="src">
                                     <xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -36,20 +36,20 @@
                                     <xsl:value-of select="Title"></xsl:value-of>
                                 </xsl:attribute>
                             </img>
-                        </a>
+                        <!-- </a> -->
                     </div>
                 </div>
                 <figcaption>
                     <h2 class="text-center">
-                        <a>
+                        <!-- <a>
                             <xsl:attribute name="href">
                                 <xsl:value-of select="Url"></xsl:value-of>
                             </xsl:attribute>
                             <xsl:attribute name="title">
                                 <xsl:value-of select="Title"></xsl:value-of>
-                            </xsl:attribute>
+                            </xsl:attribute> -->
                             <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-                        </a>
+                        <!-- </a> -->
                     </h2>
                 </figcaption>
             </div>
