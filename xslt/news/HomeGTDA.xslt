@@ -1,42 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
-<xsl:output method="html" indent="yes"/>
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
+    <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
         <section class="home-project-introduce pt">
             <xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
         </section>
     </xsl:template>
     <xsl:template match="Zone">
-         <div class="container">
-                <div class="home-project-bg-wrapper">
-                    <div class="article-title-red-line-m0">
-                        <p><xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of></p>
-                    </div>
-                    <xsl:apply-templates select="News"></xsl:apply-templates>
+        <div class="container">
+            <div class="home-project-bg-wrapper">
+                <div class="article-title-red-line-m0">
+                    <p>
+                        <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                    </p>
                 </div>
+                <xsl:apply-templates select="News[1]"></xsl:apply-templates>
             </div>
+        </div>
     </xsl:template>
     <xsl:template match="News">
-        <div class="row bg-grey">
+		<div class="bg-grey">
+        <div class="row ">
             <div class="col-lg-8">
-               <h2><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></h2>
-               <div class="view-more-button">
-                <a>
-                   <xsl:attribute name="href">
-                       <xsl:value-of select="Url"></xsl:value-of>
-                   </xsl:attribute>
-                   <xsl:attribute name="title">
-                       <xsl:value-of select="Title"></xsl:value-of>
-                   </xsl:attribute>
-                   <xsl:text disable-output-escaping="yes">Xem thêm</xsl:text>
-               </a>
-               <em class="mdi mdi-arrow-right"></em></div>
+                <h2>
+                    <xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
+                </h2>
+                <div class="view-more-button">
+                    <a>
+                        <xsl:attribute name="href">
+                            <xsl:value-of select="Url"></xsl:value-of>
+                        </xsl:attribute>
+                        <xsl:attribute name="title">
+                            <xsl:value-of select="Title"></xsl:value-of>
+                        </xsl:attribute>
+                        <xsl:text disable-output-escaping="yes">Xem thêm</xsl:text>
+                    </a>
+                    <em class="mdi mdi-arrow-right"></em>
+                </div>
             </div>
             <div class="col-lg-4">
                 <div class="home-project-text-wrapper">
-                   <xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
+                    <xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
                 </div>
             </div>
         </div>
+		</div>
     </xsl:template>
 </xsl:stylesheet>

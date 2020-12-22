@@ -371,7 +371,7 @@ $(document).ready(function () {
 	mappingSearch();
 	mappingContact();
 	AboutNav.init();
-	GalleryNav();
+	// GalleryNav();
 	ShareNewsDetail();
 	height('.tvc-news .news-small .figure-news');
 	ProjectDetailSlide();
