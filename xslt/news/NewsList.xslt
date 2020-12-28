@@ -105,7 +105,9 @@
 								<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 							</a>
 						</h2>
-						<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
+						<div class="brief-content">
+							<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
+						</div>
 					</figcaption>
 				</div>
 			</div>
